@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Delivery for Sharon</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+        h1 { color: #ff4d6d; }
+        p { color: #555; line-height: 1.6; }
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-around;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-yes { background-color: #ff4d6d; color: white; }
+        .btn-no { background-color: #ccc; color: white; }
+        .btn-yes:hover { transform: scale(1.1); }
+        #response-message {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #ff4d6d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Halo Sharon! 🌸</h1>
+    <p>Makanannya sudah sampai belum nih?</p>
+    
+    <div class="buttons" id="button-group">
+        <button class="btn-yes" onclick="showSurprise()">Sudah Diterima</button>
+        <button class="btn-no" onclick="notYet()">Belum Diterima</button>
+    </div>
+
+    <div id="response-message">
+        <p>Selamat menikmati yaa Sharon, <br> 
+        happy teruss, semanggat yaa hari ini.. Gbuu! ✨</p>
+    </div>
+</div>
+
+<script>
+    function showSurprise() {
+        document.getElementById('button-group').style.display = 'none';
+        document.getElementById('response-message').style.display = 'block';
+    }
+
+    function notYet() {
+        alert("Sabar yaa, mungkin abangnya lagi di jalan. Cek berkala ya Sharon! 😊");
+    }
+</script>
+
+</body>
+</html>
